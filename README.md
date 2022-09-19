@@ -1,2 +1,2 @@
 # hackitchen
-small web app for cooking on a budget
+small web app that indexs recipes that could help you cooking on a budget

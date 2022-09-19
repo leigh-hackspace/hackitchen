@@ -1,0 +1,22 @@
+<div class="container-fluid my-2 py-2">
+  <div class="row">
+    <div class="col-sm-4 col-md-2"></div>
+      <div class="col-sm-8 col-lg-8 my-2 py-2">
+        <%= current_page.data.page_title %>
+        <div class="card mt-4" style="width: auto;box-shadow:5px 5px 5px 5px #6c6c6c;">
+          <div class="left">
+            <%= image_tag current_page.data.img_path, class:'card-image-top rounded', alt: current_page.data.img_alt, style:'width:250px;height:250px;align-items:center;' %>
+          </div>
+          <div class="right">
+            <p class="card-text" style="color:#6c6c6c;font-style:italic;"><%= current_page.data.dificulty %></p>
+              <div class="card-body text-center">
+                <h5 class="card-title" style="text-transform:Capitalize;"><%= current_page.data.recipe_name %></h5>
+                <p class="card-text justify"><%= current_page.data.instructions %></p>
+              </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<div class="row"><br></div>
+</div>

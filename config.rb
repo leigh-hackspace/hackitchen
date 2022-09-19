@@ -13,6 +13,16 @@ page '/*.xml', layout: false
 page '/*.json', layout: false
 page '/*.txt', layout: false
 
+
+activate :livereload
+
+set :css_dir, 'css'
+set :sass_dir, 'css'
+set :fonts_dir, 'css/fonts'
+set :js_dir, 'javascript'
+set :images_dir, 'images'
+
+
 # With alternative layout
 # page '/path/to/file.html', layout: 'other_layout'
 

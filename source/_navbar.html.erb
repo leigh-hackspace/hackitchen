@@ -1,0 +1,18 @@
+
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #DEC698">
+  <%= link_to 'Recipes', '../index.html', class:'navbar-brand' %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto" style="text-transform: capitalize;">
+      <li class="nav-item dropdown">
+       <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #DEC666;">
+          <li><%= link_to 'toast', 'recipes/toast.html',  class:'dropdown-item' %></li>
+          <li><%= link_to 'cheese-on-toast', 'recipes/cheese-on-toast.html',  class:'dropdown-item' %></li>
+          <div class="dropdown-divider"></div>
+        </div>
+    </ul>
+  </div>
+</nav>
