@@ -1,7 +1,6 @@
 source 'https://rubygems.org'
 
 
-gem 'bundler', '~> 2.3', '>= 2.3.23'
 gem 'middleman', '~> 4.2'
 gem 'middleman-autoprefixer'
 gem 'middleman-livereload'
