@@ -6,7 +6,7 @@ This is a small web app that indexes recipes that could help you cooking on a bu
 
 ##### Notes 
 
-There is an example file for the structure of the recipes located in the folder: 'source/recipes/_example_recipe.html/erb.'
+There is an example file for the structure of the recipes located in the folder: 'source/recipes/example-recipe.html.erb.'
 
 The only thing that needs to be edited is the `Frontmatter` thats the bit between the two sets of  ( '---' ). 
 
