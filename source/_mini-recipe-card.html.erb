@@ -1,59 +1,87 @@
-<style> 
-.sl {
-  outline: 1px red solid;
-}
+<style>
 
-.center {
-  text-align: center;
-  font-family: 
-}
+  .sl-red {
+    outline: 0.5px solid black;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-box-shadow: 5px 5px 15px 0px #dc3545;
+    box-shadow: 5px 5px 15px 0px #dc3545;
+  }
 
-.img {
-  padding: 5px;
+  .sl-blue {
+    outline: 0.5px solid black;
+    -webkit-box-shadow: 5px 5px 15px 0px #2233FF;
+    box-shadow: 5px 5px 15px 0px #2233FF;
+  }
 
-}
+  .sl-green {
+    outline: 0.5px solid black;
+    -webkit-box-shadow: 5px 5px 15px 0px #28a745;
+    box-shadow: 5px 5px 15px 0px #28a745;
+  }
 
-.short-text {
-  display: block;
-  float: right;
-  outline: 1px red solid;
-}
-
-.button {
-  width: 150px;
-  display: flex;
-  align-items: center;
   
-}
+  .sl-yellow {
+    outline: 0.5px solid black;
+    -webkit-box-shadow: 5px 5px 15px 0px #ffc107;
+    box-shadow: 5px 5px 15px 0px #ffc107;
+  }
 
 
+  .center {
+    text-align: center;
+  }
+
+  .img {
+    padding: 5px;
+
+  }
+
+  .short-text {
+    display: block;
+    float: right;
+    outline: 1px red solid;
+  }
+
+  .button {
+    width: 150px;
+    display: flex;
+    align-items: center;
+
+  }
 </style>
 
+<div class="row">
+  <div class="container my-2 py-3 px-3">
+          <div class="row"></div>
+          <div class="col-sm-8 col-md-4"></div>
 
-<div class="container-fluid my-2 py-2">
-  <div class="row"></div>
-  <div class="col-sm-8 col-md-4"></div>
-  <div class="card mb-3" style="max-width: 640px;">
-    <% current_page.data.recipes.each do |r| %>
-    <div class="row no-gutters sl my-3">
-        <div class="col-md-4 ">
-        <%= image_tag r.recipe.img_path, class:'card-image-top rounded', alt: r.recipe.img_alt, style:'width:250px;height:250px;align-items:center;' %>
-        </div>
-        <div class="col-md-1"></div>
-        <div class="col-md-6">
-          <div class="card-body">
-            <h5 class="card-title"><%= r.recipe.page_title %></h5>
-            <p class="card-text"><%= r.recipe.short_desc %></p>
-            <p class="card-text"><small class="text-muted">Cooking Difficulty: <%= r.recipe.difficulty %></p>
-            <p class="card-text"><small class="text-muted">Time to cook: <%= r.recipe.cooking_time_minutes %> Mins </p>
+          <div class="card mb-3" style="max-width: 640px;max-height:300px;">
+            <% current_page.data.recipes.each do |r| %>
+              <div class="row no-gutters sl-red my-3 py-3">
+                <div class="col-md-4">
+                  <%= image_tag r.recipe.img_path, class:"card-image-top rounded",alt: r.recipe.img_alt,
+                    style:"width:250px;height:250px;align-items:center;" %>
+                </div>
+                <div class="col-md-1"></div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title">
+                      <%= r.recipe.page_title %>
+                    </h5>
+                    <p class="card-text">
+                      <%= r.recipe.short_desc %>
+                    </p>
+                    <div class="text-muted">
+                      <p class="card-text">Cooking Difficulty: <%= r.recipe.difficulty %>
+                      </p>
+                      <p class="card-text">Time to cook: <%= r.recipe.cooking_time_minutes %> Mins</p>
+                    </div>
+                  </div>
+                  <%= link_to "Check it out" , r.recipe.button_path, class:"btn btn-outline-danger align-self-center" %>
+                </div>
+                  
+              </div>
+            <% end %>
           </div>
-        </div>
-        <div class="d-flex justify-content-center">
-          <%= link_to "Check it out", r.recipe.button_path, class:"btn btn-outline-success" %>
-        </div>
-        </div>
-        
-      <% end %>
-      </div>
   </div>
 </div>
