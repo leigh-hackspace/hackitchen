@@ -1,26 +1,30 @@
-
-<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #DEC698">
+<style>
+  .menu-buttons {
+    display: flex;
+    float: left;
+  }
+</style>
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #DE6C6C">
   <%= link_to 'Recipes', '../index.html', class:'navbar-brand' %>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto" style="text-transform: capitalize;">
-      <li class="nav-item dropdown">
-       <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #DEC666;">
-         <li class="misc">
-           <ul><%= link_to 'Beef bulgogi with beans', '/recipes/beef/bulgogi.html', class:'dropdown-item' %></ul>
-           <ul><%= link_to 'Beef burger', '/recipes/beef/beef-burger-with-pickled-slaw.html', class:'dropdown-item' %></ul>
-           <ul><%= link_to 'Beef keema', '/recipes/beef/beef-keema-with-lime-and-coriander.html', class:'dropdown-item' %></ul>
-           <ul><%= link_to 'Beef meatball sandwich', '/recipes/beef/vietnamese-beef-meatball-sandwich.html', class:'dropdown-item' %></ul>
-
-           <ul><%= link_to 'toast', '/recipes/toast.html',  class:'dropdown-item' %></ul>
-          <ul><%= link_to 'cheese-on-toast', '/recipes/cheese-on-toast.html',  class:'dropdown-item' %></ul>
-           <ul><%= link_to 'example', '/recipes/example-recipe.html',  class:'dropdown-item' %></ul>
-         </li>
-         <div class="dropdown-divider"></div>
-        </div>
-    </ul>
-  </div>
+  <ul class="navbar-nav mr-auto" style="text-transform: capitalize;">
+    <li class="nav-item dropdown">
+     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: #DE66CC;">
+       <li class="menu-buttons">
+         <ul><%= link_to 'Beef', '/recipes/beef/index.html', class:'dropdown-item' %></ul>
+         <ul><%= link_to 'Chicken', '/recipes/chicken/index.html', class:'dropdown-item' %></ul>
+         <ul><%= link_to 'Fish', '/recipes/fish/index.html', class:'dropdown-item' %></ul>
+         <ul><%= link_to 'Pork', '/recipes/pork/index.html', class:'dropdown-item' %></ul>
+         <ul><%= link_to 'Vegan', '/recipes/vegan/index.html', class:'dropdown-item' %></ul>
+         <ul><%= link_to 'Veggie', '/recipes/veggie/index.html', class:'dropdown-item' %></ul>
+         <ul><%= link_to 'misc', '/recipes/misc/index.html', class:'dropdown-item' %></ul>
+       </li>
+       <div class="dropdown-divider"></div>
+      </div>
+  </ul>
+</div>  
 </nav>
