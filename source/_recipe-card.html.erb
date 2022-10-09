@@ -1,3 +1,18 @@
+<style>
+table {
+  align: center;
+}
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+th, td {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 30px;
+  padding-right: 40px;
+}
+</style>
 <div class="container-fluid my-2 py-2">
   <div class="row">
     <div class="col-sm-4 col-md-2"></div>
@@ -8,11 +23,35 @@
             <%= image_tag current_page.data.img_path, class:'card-image-top rounded', alt: current_page.data.img_alt, style:'width:250px;height:250px;align-items:center;' %>
           </div>
           <div class="right">
-            <p class="card-text" style="color:#6c6c6c;font-style:italic;"><%= current_page.data.dificulty %></p>
-                <h5 class="card-title" style="text-transform:Capitalize;"><%= current_page.data.recipe_source || 'ORIGINAL RECIPAAAY'  %></h5>
+            <p class="card-text" style="color:#6c6c6c;font-style:italic;">Difficulty: <%= current_page.data.dificulty %></p>
+                <h5 class="card-title" style="text-transform:Capitalize;">Recipe Source: <%= current_page.data.recipe_source || 'ORIGINAL RECIPAAAY'  %></h5>
               <div class="card-body text-center">
                 <h5 class="card-title" style="text-transform:Capitalize;"><%= current_page.data.recipe_name %></h5>
-                <p class="card-text justify"><%= current_page.data.instructions %></p>
+                <div>
+                  <p class="card-text justify">
+                  <hr>
+                  <center>
+                      <table class="ingredients-table">
+                      <th>Ingredients</th>
+                      <th>Qty.</th>
+                      <% current_page.data.ingredients.each do| ingredient | %>
+                        <tr>
+                          <td><%= ingredient[0] %></td>
+                          <td><%= ingredient[1] %></td>
+                        </tr>
+                        <%end %>
+                    </table>
+                    </p>
+                  </div>
+                </center>
+                <hr>
+                <p class="card-text">
+                <ol>
+                  <% current_page.data.instructions.each do | step | %>
+                    <li style='text-align: left;'><%= step %></li>
+                  <% end %>
+                  </ol>
+                </p>
               </div>
           </div>
         </div>
