@@ -25,5 +25,5 @@ The Images need to be saved in 'source/images/FOO.jpg' replace "FOO" with the na
 If you found the recipe online, please provide a link to the original recipe.
 
 *Note
-If you dont know how to code no problem you can submit a recipe to the from located [here](https://discourse.leighhack.org/c/hackitchen/13) 
+If you dont know how to code no problem you can submit a recipe to the form located [here](https://discourse.leighhack.org/c/hackitchen/13) 
 and one of the Hackspace Team will enter it on the app.
